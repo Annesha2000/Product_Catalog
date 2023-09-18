@@ -1,0 +1,39 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  
+
+
+logging:
+  file:
+    name: log.txt
+    path: /
+  level:
+    com:
+      assignment:
+        location-service: debug
+server:
+  port: 8081
+spring:
+  application:
+    name: product-catalog-service
+  data:
+    mongodb:
+      uri: mongodb+srv://Annesha:Annesha2000@cluster0.6cew0wx.mongodb.net/product-catalog?retryWrites=true&w=majority
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  output:
+    ansi:
+      enabled: always
+
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer   
+      
+      
+
+  
